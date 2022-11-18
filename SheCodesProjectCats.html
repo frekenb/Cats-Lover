@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="file.css" />
+    <title>kitty</title>
+    <style>
+      .container {
+        max-width: 600px;
+        display: block;
+        margin: 0 auto;
+
+        font-family: cursive;
+        padding: 25px;
+        box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+        background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+      }
+      h1 {
+        margin: 0 auto;
+        text-decoration: none;
+        text-align: center;
+        color: #a56cc1;
+      }
+      h2 {
+        margin: 0 auto;
+        text-align: center;
+        color: #a6acec;
+      }
+      .dog {
+        text-align: right;
+        margin: 0 auto;
+        padding-right: 30%;
+      }
+      img {
+        display: block;
+        margin: 10px auto;
+        padding: 15px 20px;
+        border: rgba(0, 0, 255, 0.2);
+        width: 95%;
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 21px;
+        margin: 20px 0 10px;
+        text-align: justify;
+        text-justify: ;
+        color: #a6acec;
+      }
+      button {
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        border-color: none;
+        margin: 0 auto;
+        box-shadow: 2px 2px 1px 1px rgba(0, 0, 255, 0.2);
+        background-color: #a56cc1;
+        color: white;
+        padding: 19px 23px;
+        border-radius: 30px;
+      }
+      button:hover {
+        color: #a56cc1;
+        background-color: transparent;
+        opacity: 0.9;
+        transition: all 500ms ease-in-out;
+        cursor: pointer;
+      }
+      h3 {
+        color: #a6acec;
+        text-align: center;
+      }
+      .info {
+        color: #efb7ac;
+        text-align: justify;
+      }
+      .infoInst {
+        color: #efb7ac;
+        font-style: italic;
+        text-decoration: none;
+      }
+      .infoInst:hover {
+        color: #a56cc1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Are you cat lover? 🐈</h1>
+      <hr />
+      <h2>Cats - most popular companion animals</h2>
+      <p class="dog">...after dogs, maybe 🐶</p>
+
+      <img
+        src="https://img.wallscloud.net/uploads/cache/2093754103/%D0%9A%D0%BE%D1%82%D0%B5%D0%BD%D0%BE%D0%BA_%D0%B2_%D1%80%D1%83%D0%BA%D0%B0%D0%B2%D0%B5-1024x576-MM-90.webp"
+        alt="Lovely kitty"
+        title="Kitty with blue eyes"
+      />
+      <hr />
+      <p>
+        Everything they do, they do because they
+        <em> want to. </em> Cats can be truly loyal, but unlike dogs, that
+        loyalty comes out of their desire to be loyal to you. That makes it so
+        much more valuable.
+      </p>
+      <p>
+        Owning a cat can bring unconditional love and companionship to your
+        life. Having a feline friend can also help to relieve stress and improve
+        your heart health. Owning a cat can be an extremely rewarding
+        relationship.
+      </p>
+
+      <h3>
+        It's time to bring <em> small piece of <s> love</s> cat </em> in your
+        life
+      </h3>
+      <button autofocus>take kitten</button>
+      <hr />
+      <div class="info">&copy; Maryna Dmytryk</div>
+      <div class="info">
+        Insta:<a
+          href="https://www.instagram.com/frekenb/"
+          class="infoInst"
+          target="_blank"
+          >&nbsp;@frekenb</a
+        >
+      </div>
+    </div>
+    <script>
+      function takeKitten() {
+        let name = prompt("What's your name?");
+
+        let favoriteAnimal = prompt(
+          "Which animal do you like more: cat 🐱 or dog 🐶 ?"
+        );
+        favoriteAnimal = favoriteAnimal.toLowerCase().trim();
+        let email = prompt("What's you email adress?");
+
+        let h3 = document.querySelector("h3");
+        if (favoriteAnimal === "cat" /* && name > 2 && email > 6 */) {
+          alert(
+            "Thank you, " + name + "! Join to our community of Cat Lovers 🐱 "
+          );
+        } else {
+          h3.innerHTML =
+            "Thank you, " +
+            name +
+            ", for visiting this website. Write on our mail adress when you decide adopt cat 😻 ";
+          h3.style.color = "#a56cc1";
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", takeKitten);
+    </script>
+  </body>
+</html>
